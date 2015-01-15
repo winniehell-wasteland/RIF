@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RIF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://automotive-his.de/schema/rif" xmlns:rif-xhtml="http://automotive-his.de/schema/rif-xhtml" xsi:schemaLocation="http://automotive-his.de/schema/rif rif.xsd http://automotive-his.de/schema/rif-xhtml rif-xhtml.xsd">
+	<TITLE>Test data RIF11</TITLE>
+	<COMMENT>Definition of an enumeration type</COMMENT>
+	<AUTHOR>Stefan Hendrata</AUTHOR>
+	<VERSION>0.1</VERSION>
+	<CREATION-TIME>2005-05-23T12:00:00+02:00</CREATION-TIME>
+	<COUNTRY-CODE>DE</COUNTRY-CODE>
+	<SOURCE-TOOL-ID>Manually written</SOURCE-TOOL-ID>
+	<IDENTIFIER>247f6e78-59d1-11da-a099-a76bd5e77ad4</IDENTIFIER>
+	<DATATYPES>
+		<DATATYPE-DEFINITION-ENUMERATION>
+			<IDENTIFIER>24724932-59d1-11da-babe-d7cd818a84df</IDENTIFIER>
+			<LONG-NAME>Requirement status</LONG-NAME>
+			<DESC>This enumeration datatype contains the possible statuses for a requirement.</DESC>
+			<LAST-CHANGE>2005-05-27T14:34:51+02:00</LAST-CHANGE>
+			<SPECIFIED-VALUES>
+				<ENUM-VALUE>
+					<IDENTIFIER>2474eea8-59d1-11da-a46d-1384ae67488d</IDENTIFIER>
+					<LONG-NAME>New</LONG-NAME>
+					<DESC>Requirement is new and not yet approved.</DESC>
+				</ENUM-VALUE>
+				<ENUM-VALUE>
+					<IDENTIFIER>247789f6-59d1-11da-8027-eb7d4f41098b</IDENTIFIER>
+					<LONG-NAME>Approved</LONG-NAME>
+					<DESC>Requirement has been consolidated and is now approved.</DESC>
+				</ENUM-VALUE>
+				<ENUM-VALUE>
+					<IDENTIFIER>247a2da0-59d1-11da-8bf1-83b771c3cc10</IDENTIFIER>
+					<LONG-NAME>Rejected</LONG-NAME>
+					<DESC>Consolidation on requirement has not been successful, requirement is thus rejected.</DESC>
+				</ENUM-VALUE>
+				<ENUM-VALUE>
+					<IDENTIFIER>247ccf06-59d1-11da-9f9f-6366f53888a6</IDENTIFIER>
+					<LONG-NAME>Postponed</LONG-NAME>
+					<DESC>Decision on whether to approve or reject the requirement is postponed to a later date.</DESC>
+				</ENUM-VALUE>
+			</SPECIFIED-VALUES>
+		</DATATYPE-DEFINITION-ENUMERATION>
+	</DATATYPES>
+</RIF>
