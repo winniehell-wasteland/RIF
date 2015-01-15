@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RIF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://automotive-his.de/schema/rif" xmlns:rif-xhtml="http://automotive-his.de/schema/rif-xhtml" xsi:schemaLocation="http://automotive-his.de/schema/rif rif.xsd http://automotive-his.de/schema/rif-xhtml rif-xhtml.xsd">
-	<TITLE>Test data RIF10</TITLE>
-	<COMMENT>Definition of simple types</COMMENT>
-	<AUTHOR>Stefan Hendrata</AUTHOR>
-	<VERSION>0.1</VERSION>
-	<CREATION-TIME>2005-05-23T12:00:00+02:00</CREATION-TIME>
-	<COUNTRY-CODE>DE</COUNTRY-CODE>
-	<SOURCE-TOOL-ID>Manually written</SOURCE-TOOL-ID>
-	<IDENTIFIER>2464159c-59d1-11da-9888-27d54ec84a16</IDENTIFIER>
-	<DATATYPES>
-		<DATATYPE-DEFINITION-BOOLEAN>
-			<DESC>This is a standard boolean type.</DESC>
-			<IDENTIFIER>245edeec-59d1-11da-996b-5756406e944f</IDENTIFIER>
-			<LONG-NAME>Stanard Boolean Type</LONG-NAME>
-		</DATATYPE-DEFINITION-BOOLEAN>
-		<DATATYPE-DEFINITION-INTEGER>
-			<DESC>This is a standard integer type for a 32 bit signed value.</DESC>
-			<IDENTIFIER>24617bde-59d1-11da-90af-9f01df2836f5</IDENTIFIER>
-			<LONG-NAME>Stanard Integer Type</LONG-NAME>
-			<MIN>-2147483648</MIN>
-			<MAX>2147483647</MAX>
-		</DATATYPE-DEFINITION-INTEGER>
-		<DATATYPE-DEFINITION-REAL>
-			<DESC>This is a standard real type for a 32 bit floating-point value.</DESC>
-			<IDENTIFIER>2466b55e-59d1-11da-8fd2-474dfc44cccb</IDENTIFIER>
-			<LONG-NAME>Stanard Real Type</LONG-NAME>
-			<MIN>1.5E-45</MIN>
-			<MAX>3.4E38</MAX>
-			<ACCURACY>7</ACCURACY>
-		</DATATYPE-DEFINITION-REAL>
-		<DATATYPE-DEFINITION-STRING>
-			<DESC>This is a standard string type.</DESC>
-			<IDENTIFIER>24697cbc-59d1-11da-89ab-8b2f7d492a18</IDENTIFIER>
-			<LONG-NAME>Standard String Type</LONG-NAME>
-			<MAX-LENGTH>65535</MAX-LENGTH>
-		</DATATYPE-DEFINITION-STRING>
-	</DATATYPES>
+<RIF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://automotive-his.de/schema/rif"
+     xmlns:rif-xhtml="http://automotive-his.de/schema/rif-xhtml"
+     xsi:schemaLocation="http://automotive-his.de/schema/rif rif.xsd http://automotive-his.de/schema/rif-xhtml rif-xhtml.xsd">
+    <TITLE>Test data RIF10</TITLE>
+    <COMMENT>Definition of simple types</COMMENT>
+    <AUTHOR>Stefan Hendrata</AUTHOR>
+    <VERSION>0.1</VERSION>
+    <CREATION-TIME>2005-05-23T12:00:00+02:00</CREATION-TIME>
+    <COUNTRY-CODE>DE</COUNTRY-CODE>
+    <SOURCE-TOOL-ID>Manually written</SOURCE-TOOL-ID>
+    <IDENTIFIER>2464159c-59d1-11da-9888-27d54ec84a16</IDENTIFIER>
+    <DATATYPES>
+        <DATATYPE-DEFINITION-BOOLEAN>
+            <DESC>This is a standard boolean type.</DESC>
+            <IDENTIFIER>245edeec-59d1-11da-996b-5756406e944f</IDENTIFIER>
+            <LONG-NAME>Stanard Boolean Type</LONG-NAME>
+        </DATATYPE-DEFINITION-BOOLEAN>
+        <DATATYPE-DEFINITION-INTEGER>
+            <DESC>This is a standard integer type for a 32 bit signed value.</DESC>
+            <IDENTIFIER>24617bde-59d1-11da-90af-9f01df2836f5</IDENTIFIER>
+            <LONG-NAME>Stanard Integer Type</LONG-NAME>
+            <MIN>-2147483648</MIN>
+            <MAX>2147483647</MAX>
+        </DATATYPE-DEFINITION-INTEGER>
+        <DATATYPE-DEFINITION-REAL>
+            <DESC>This is a standard real type for a 32 bit floating-point value.</DESC>
+            <IDENTIFIER>2466b55e-59d1-11da-8fd2-474dfc44cccb</IDENTIFIER>
+            <LONG-NAME>Stanard Real Type</LONG-NAME>
+            <MIN>1.5E-45</MIN>
+            <MAX>3.4E38</MAX>
+            <ACCURACY>7</ACCURACY>
+        </DATATYPE-DEFINITION-REAL>
+        <DATATYPE-DEFINITION-STRING>
+            <DESC>This is a standard string type.</DESC>
+            <IDENTIFIER>24697cbc-59d1-11da-89ab-8b2f7d492a18</IDENTIFIER>
+            <LONG-NAME>Standard String Type</LONG-NAME>
+            <MAX-LENGTH>65535</MAX-LENGTH>
+        </DATATYPE-DEFINITION-STRING>
+    </DATATYPES>
 </RIF>
