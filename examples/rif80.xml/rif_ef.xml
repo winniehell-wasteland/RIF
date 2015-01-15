@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RIF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://automotive-his.de/200706/rif" xmlns:rif-xhtml="http://automotive-his.de/200706/rif-xhtml" xsi:schemaLocation="http://automotive-his.de/200706/rif rif.xsd http://automotive-his.de/200706/rif-xhtml rif-xhtml.xsd">
-	<TITLE>Test data RIF70</TITLE>
-	<COMMENT>Simple picture objects that are embedded inline and externally.</COMMENT>
+	<TITLE>Test data RIF80</TITLE>
+	<COMMENT>RiF file with content and embedded objects, compiled into one package.</COMMENT>
 	<AUTHOR>Stefan Hendrata</AUTHOR>
 	<VERSION>0.1</VERSION>
 	<CREATION-TIME>2005-05-23T12:00:00+02:00</CREATION-TIME>
@@ -16,12 +16,46 @@
 			<FORMAT>XHTML</FORMAT>
 			<EMBEDDED>TRUE</EMBEDDED>
 		</DATATYPE-DEFINITION-DOCUMENT>
+		<DATATYPE-DEFINITION-STRING>
+			<DESC>This is a standard string type.</DESC>
+			<IDENTIFIER>ID_StringType_1</IDENTIFIER>
+			<LONG-NAME>Standard String Type</LONG-NAME>
+			<MAX-LENGTH>65535</MAX-LENGTH>
+		</DATATYPE-DEFINITION-STRING>
+		<DATATYPE-DEFINITION-ENUMERATION>
+			<IDENTIFIER>ID_DatatypeEnum_1</IDENTIFIER>
+			<LONG-NAME>Requirement status</LONG-NAME>
+			<DESC>This enumeration datatype contains the possible statuses for a requirement.</DESC>
+			<LAST-CHANGE>2005-05-27T14:34:51+02:00</LAST-CHANGE>
+			<SPECIFIED-VALUES>
+				<ENUM-VALUE>
+					<IDENTIFIER>ID_EnumValue_1</IDENTIFIER>
+					<LONG-NAME>New</LONG-NAME>
+					<DESC>Requirement is new and not yet approved.</DESC>
+				</ENUM-VALUE>
+				<ENUM-VALUE>
+					<IDENTIFIER>ID_EnumValue_2</IDENTIFIER>
+					<LONG-NAME>Approved</LONG-NAME>
+					<DESC>Requirement has been consolidated and is now approved.</DESC>
+				</ENUM-VALUE>
+				<ENUM-VALUE>
+					<IDENTIFIER>ID_EnumValue_3</IDENTIFIER>
+					<LONG-NAME>Rejected</LONG-NAME>
+					<DESC>Consolidation on requirement has not been successful, requirement is thus rejected.</DESC>
+				</ENUM-VALUE>
+				<ENUM-VALUE>
+					<IDENTIFIER>ID_EnumValue_4</IDENTIFIER>
+					<LONG-NAME>Postponed</LONG-NAME>
+					<DESC>Decision on whether to approve or reject the requirement is postponed to a later date.</DESC>
+				</ENUM-VALUE>
+			</SPECIFIED-VALUES>
+		</DATATYPE-DEFINITION-ENUMERATION>
 	</DATATYPES>
 	<SPEC-TYPES>
 		<SPEC-TYPE>
 			<IDENTIFIER>ID_SpecType_1</IDENTIFIER>
 			<LONG-NAME>Example SpecType</LONG-NAME>
-			<DESC>This is a basic SpecType.</DESC>
+			<DESC>This is an example SpecType with some common attributes.</DESC>
 			<LAST-CHANGE>2005-05-30T11:42:19+02:00</LAST-CHANGE>
 			<SPEC-ATTRIBUTES>
 				<ATTRIBUTE-DEFINITION-COMPLEX>
@@ -33,6 +67,37 @@
 						<DATATYPE-DEFINITION-DOCUMENT-REF>ID_DatatypeXhtml</DATATYPE-DEFINITION-DOCUMENT-REF>
 					</TYPE>
 				</ATTRIBUTE-DEFINITION-COMPLEX>
+				<ATTRIBUTE-DEFINITION-SIMPLE>
+					<IDENTIFIER>ID_AttrDef_2</IDENTIFIER>
+					<LONG-NAME>Author</LONG-NAME>
+					<DESC>This attribute contains the auhor of the requirement as a string.</DESC>
+					<LAST-CHANGE>2005-05-30T11:51:25+02:00</LAST-CHANGE>
+					<DEFAULT-VALUE>
+						<ATTRIBUTE-VALUE-SIMPLE>
+							<THE-VALUE>TBD</THE-VALUE>
+						</ATTRIBUTE-VALUE-SIMPLE>
+					</DEFAULT-VALUE>
+					<TYPE>
+						<DATATYPE-DEFINITION-STRING-REF>ID_StringType_1</DATATYPE-DEFINITION-STRING-REF>
+					</TYPE>
+				</ATTRIBUTE-DEFINITION-SIMPLE>
+				<ATTRIBUTE-DEFINITION-ENUMERATION>
+					<IDENTIFIER>ID_AttrDef_3</IDENTIFIER>
+					<LONG-NAME>Status</LONG-NAME>
+					<DESC>This attribute contains the current status of the requirement.</DESC>
+					<LAST-CHANGE>2005-05-30T11:56:14+02:00</LAST-CHANGE>
+					<MULTI-VALUED>FALSE</MULTI-VALUED>
+					<TYPE>
+						<DATATYPE-DEFINITION-ENUMERATION-REF>ID_DatatypeEnum_1</DATATYPE-DEFINITION-ENUMERATION-REF>
+					</TYPE>
+					<DEFAULT-VALUE>
+						<ATTRIBUTE-VALUE-ENUMERATION>
+							<VALUES>
+								<ENUM-VALUE-REF>ID_EnumValue_1</ENUM-VALUE-REF>
+							</VALUES>
+						</ATTRIBUTE-VALUE-ENUMERATION>
+					</DEFAULT-VALUE>
+				</ATTRIBUTE-DEFINITION-ENUMERATION>
 			</SPEC-ATTRIBUTES>
 		</SPEC-TYPE>
 	</SPEC-TYPES>
@@ -56,6 +121,24 @@
 						</rif-xhtml:div>
 					</XHTML-CONTENT>
 				</ATTRIBUTE-VALUE-EMBEDDED-DOCUMENT>
+				<ATTRIBUTE-VALUE-SIMPLE>
+					<IDENTIFIER>ID_AttrVal_2</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-SIMPLE-REF>ID_AttrDef_2</ATTRIBUTE-DEFINITION-SIMPLE-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:29:23+02:00</LAST-CHANGE>
+					<THE-VALUE>Max Mustermann</THE-VALUE>
+				</ATTRIBUTE-VALUE-SIMPLE>
+				<ATTRIBUTE-VALUE-ENUMERATION>
+					<IDENTIFIER>ID_AttrVal_3</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-ENUMERATION-REF>ID_AttrDef_3</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:32:55+02:00</LAST-CHANGE>
+					<VALUES>
+						<ENUM-VALUE-REF>ID_EnumValue_2</ENUM-VALUE-REF>
+					</VALUES>
+				</ATTRIBUTE-VALUE-ENUMERATION>
 			</VALUES>
 		</SPEC-OBJECT>
 		<SPEC-OBJECT>
@@ -73,7 +156,7 @@
 					<LAST-CHANGE>2005-05-31T10:36:26+02:00</LAST-CHANGE>
 					<XHTML-CONTENT>
 						<rif-xhtml:div>
-							This requirement contains a simple picture object which is embedded inline:
+							This requirement contains an embedded object. This object is a bitmap and stored inline:
 							<rif-xhtml:object name="ID_Object_1" type="CF_BITMAP" data="picture_1.png">
 iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAIAAAC6s0uzAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAg
 AElEQVR4nOy913McV7buuf6KPu+nYx66JVK08N4UTAEgvCsUPEkZkqJEgkb03sAQ9Fb03gok6A1o
@@ -628,6 +711,24 @@ KB8AAAAASUVORK5CYII=
 						</rif-xhtml:div>
 					</XHTML-CONTENT>
 				</ATTRIBUTE-VALUE-EMBEDDED-DOCUMENT>
+				<ATTRIBUTE-VALUE-SIMPLE>
+					<IDENTIFIER>ID_AttrVal_5</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-SIMPLE-REF>ID_AttrDef_2</ATTRIBUTE-DEFINITION-SIMPLE-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:36:32+02:00</LAST-CHANGE>
+					<THE-VALUE>Max Mustermann</THE-VALUE>
+				</ATTRIBUTE-VALUE-SIMPLE>
+				<ATTRIBUTE-VALUE-ENUMERATION>
+					<IDENTIFIER>ID_AttrVal_6</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-ENUMERATION-REF>ID_AttrDef_3</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:36:47+02:00</LAST-CHANGE>
+					<VALUES>
+						<ENUM-VALUE-REF>ID_EnumValue_2</ENUM-VALUE-REF>
+					</VALUES>
+				</ATTRIBUTE-VALUE-ENUMERATION>
 			</VALUES>
 		</SPEC-OBJECT>
 		<SPEC-OBJECT>
@@ -635,22 +736,120 @@ KB8AAAAASUVORK5CYII=
 			<TYPE>
 				<SPEC-TYPE-REF>ID_SpecType_1</SPEC-TYPE-REF>
 			</TYPE>
-			<LAST-CHANGE>2005-06-01T14:39:17+02:00</LAST-CHANGE>
+			<LAST-CHANGE>2005-05-31T10:37:17+02:00</LAST-CHANGE>
 			<VALUES>
 				<ATTRIBUTE-VALUE-EMBEDDED-DOCUMENT>
-					<IDENTIFIER>ID_AttrVal_4</IDENTIFIER>
+					<IDENTIFIER>ID_AttrVal_7</IDENTIFIER>
 					<DEFINITION>
 						<ATTRIBUTE-DEFINITION-COMPLEX-REF>ID_AttrDef_1</ATTRIBUTE-DEFINITION-COMPLEX-REF>
 					</DEFINITION>
-					<LAST-CHANGE>2005-06-01T15:36:26+02:00</LAST-CHANGE>
+					<LAST-CHANGE>2005-05-31T10:37:26+02:00</LAST-CHANGE>
 					<XHTML-CONTENT>
 						<rif-xhtml:div>
-							This requirement contains a simple picture object which is stored externally:
-							<rif-xhtml:object name="ID_Object_2" type="CF_BITMAP" data="picture_2.png">
-							</rif-xhtml:object>
+							This requirement contains an embedded object. This object is a bitmap and stored externally:
+							<rif-xhtml:object name="ID_Object_2" type="CF_BITMAP" data="picture_2.png"/>
 						</rif-xhtml:div>
 					</XHTML-CONTENT>
 				</ATTRIBUTE-VALUE-EMBEDDED-DOCUMENT>
+				<ATTRIBUTE-VALUE-SIMPLE>
+					<IDENTIFIER>ID_AttrVal_8</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-SIMPLE-REF>ID_AttrDef_2</ATTRIBUTE-DEFINITION-SIMPLE-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:37:32+02:00</LAST-CHANGE>
+					<THE-VALUE>Max Mustermann</THE-VALUE>
+				</ATTRIBUTE-VALUE-SIMPLE>
+				<ATTRIBUTE-VALUE-ENUMERATION>
+					<IDENTIFIER>ID_AttrVal_9</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-ENUMERATION-REF>ID_AttrDef_3</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:37:47+02:00</LAST-CHANGE>
+					<VALUES>
+						<ENUM-VALUE-REF>ID_EnumValue_2</ENUM-VALUE-REF>
+					</VALUES>
+				</ATTRIBUTE-VALUE-ENUMERATION>
+			</VALUES>
+		</SPEC-OBJECT>
+		<SPEC-OBJECT>
+			<IDENTIFIER>ID_SpecObj_4</IDENTIFIER>
+			<TYPE>
+				<SPEC-TYPE-REF>ID_SpecType_1</SPEC-TYPE-REF>
+			</TYPE>
+			<LAST-CHANGE>2005-05-31T10:38:17+02:00</LAST-CHANGE>
+			<VALUES>
+				<ATTRIBUTE-VALUE-EMBEDDED-DOCUMENT>
+					<IDENTIFIER>ID_AttrVal_10</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-COMPLEX-REF>ID_AttrDef_1</ATTRIBUTE-DEFINITION-COMPLEX-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:38:26+02:00</LAST-CHANGE>
+					<XHTML-CONTENT>
+						<rif-xhtml:div>
+							This requirement contains an OLE object. This object is an Excel table and stored externally:
+							<rif-xhtml:object name="ID_Object_1" classid="00030001-0000-0000-C000-000000000046" data="table_1.xls"/>
+						</rif-xhtml:div>
+					</XHTML-CONTENT>
+				</ATTRIBUTE-VALUE-EMBEDDED-DOCUMENT>
+				<ATTRIBUTE-VALUE-SIMPLE>
+					<IDENTIFIER>ID_AttrVal_11</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-SIMPLE-REF>ID_AttrDef_2</ATTRIBUTE-DEFINITION-SIMPLE-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:38:32+02:00</LAST-CHANGE>
+					<THE-VALUE>Max Mustermann</THE-VALUE>
+				</ATTRIBUTE-VALUE-SIMPLE>
+				<ATTRIBUTE-VALUE-ENUMERATION>
+					<IDENTIFIER>ID_AttrVal_12</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-ENUMERATION-REF>ID_AttrDef_3</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:38:47+02:00</LAST-CHANGE>
+					<VALUES>
+						<ENUM-VALUE-REF>ID_EnumValue_3</ENUM-VALUE-REF>
+					</VALUES>
+				</ATTRIBUTE-VALUE-ENUMERATION>
+			</VALUES>
+		</SPEC-OBJECT>
+		<SPEC-OBJECT>
+			<IDENTIFIER>ID_SpecObj_5</IDENTIFIER>
+			<TYPE>
+				<SPEC-TYPE-REF>ID_SpecType_1</SPEC-TYPE-REF>
+			</TYPE>
+			<LAST-CHANGE>2005-05-31T10:39:17+02:00</LAST-CHANGE>
+			<VALUES>
+				<ATTRIBUTE-VALUE-EMBEDDED-DOCUMENT>
+					<IDENTIFIER>ID_AttrVal_13</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-COMPLEX-REF>ID_AttrDef_1</ATTRIBUTE-DEFINITION-COMPLEX-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:39:26+02:00</LAST-CHANGE>
+					<XHTML-CONTENT>
+						<rif-xhtml:div>
+							This requirement contains an OLE object with multiple representation forms. This object is a Visio drawing and represented in the original Visio format and in the PNG bitmap format:
+							<rif-xhtml:object name="ID_Object_1" classid="00021A13-0000-0000-C000-000000000046" data="drawing_1.vsd"/>
+							<rif-xhtml:object name="ID_Object_1" type="CF_BITMAP" data="drawing_1.png"/>
+						</rif-xhtml:div>
+					</XHTML-CONTENT>
+				</ATTRIBUTE-VALUE-EMBEDDED-DOCUMENT>
+				<ATTRIBUTE-VALUE-SIMPLE>
+					<IDENTIFIER>ID_AttrVal_14</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-SIMPLE-REF>ID_AttrDef_2</ATTRIBUTE-DEFINITION-SIMPLE-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:39:32+02:00</LAST-CHANGE>
+					<THE-VALUE>Max Mustermann</THE-VALUE>
+				</ATTRIBUTE-VALUE-SIMPLE>
+				<ATTRIBUTE-VALUE-ENUMERATION>
+					<IDENTIFIER>ID_AttrVal_15</IDENTIFIER>
+					<DEFINITION>
+						<ATTRIBUTE-DEFINITION-ENUMERATION-REF>ID_AttrDef_3</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+					</DEFINITION>
+					<LAST-CHANGE>2005-05-31T10:39:47+02:00</LAST-CHANGE>
+					<VALUES>
+						<ENUM-VALUE-REF>ID_EnumValue_4</ENUM-VALUE-REF>
+					</VALUES>
+				</ATTRIBUTE-VALUE-ENUMERATION>
 			</VALUES>
 		</SPEC-OBJECT>
 	</SPEC-OBJECTS>
@@ -679,6 +878,18 @@ KB8AAAAASUVORK5CYII=
 							<IDENTIFIER>ID_SpecHierarchy_3</IDENTIFIER>
 							<OBJECT>
 								<SPEC-OBJECT-REF>ID_SpecObj_3</SPEC-OBJECT-REF>
+							</OBJECT>
+						</SPEC-HIERARCHY>
+						<SPEC-HIERARCHY>
+							<IDENTIFIER>ID_SpecHierarchy_4</IDENTIFIER>
+							<OBJECT>
+								<SPEC-OBJECT-REF>ID_SpecObj_4</SPEC-OBJECT-REF>
+							</OBJECT>
+						</SPEC-HIERARCHY>
+						<SPEC-HIERARCHY>
+							<IDENTIFIER>ID_SpecHierarchy_5</IDENTIFIER>
+							<OBJECT>
+								<SPEC-OBJECT-REF>ID_SpecObj_5</SPEC-OBJECT-REF>
 							</OBJECT>
 						</SPEC-HIERARCHY>
 					</CHILDREN>

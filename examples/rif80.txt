@@ -7,4 +7,4 @@ drawing_1.vsd
 picture_2.png
 
 
-These files are compressed into one ZIP file named "rif80.zip".
+These files have to be compressed into one ZIP file named "rif80.zip".
