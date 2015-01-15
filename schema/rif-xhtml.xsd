@@ -11,15 +11,11 @@
     <xs:annotation>
         <xs:documentation>
             ================ Character mnemonic entities =========================
-
             XHTML entity sets are identified by the PUBLIC and SYSTEM identifiers:
-
             PUBLIC "-//W3C//ENTITIES Latin 1 for XHTML//EN"
             SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml-lat1.ent"
-
             PUBLIC "-//W3C//ENTITIES Special for XHTML//EN"
             SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml-special.ent"
-
             PUBLIC "-//W3C//ENTITIES Symbols for XHTML//EN"
             SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml-symbol.ent"
         </xs:documentation>
@@ -217,7 +213,6 @@
         <xs:attribute name="style" type="StyleSheet"/>
         <xs:attribute name="title" type="Text"/>
     </xs:attributeGroup>
-
     <xs:attributeGroup name="attrs">
         <xs:attributeGroup ref="coreattrs"/>
     </xs:attributeGroup>
@@ -482,7 +477,6 @@
     <xs:annotation>
         <xs:documentation>
             =================== Headings =========================================
-
             There are six levels of headings from h1 (the most important)
             to h6 (the least important).
         </xs:documentation>
@@ -684,7 +678,6 @@
     <xs:annotation>
         <xs:documentation>
             =================== Inserted/Deleted Text ============================
-
             ins/del are allowed in block and inline content, but its
             inappropriate to include block content within an ins element
             occurring in inline content.
@@ -1025,7 +1018,6 @@
     <xs:annotation>
         <xs:documentation>
             ==================== Object ======================================
-
             object is used to embed objects as part of HTML pages.
             param elements should precede other content. Parameters
             can also be expressed as attribute/value pairs on the
@@ -1090,7 +1082,6 @@
     <xs:annotation>
         <xs:documentation>
             =================== Images ===========================================
-
             To avoid accessibility problems for people who aren't
             able to see the image, you should provide a text
             description using the alt and longdesc attributes.
