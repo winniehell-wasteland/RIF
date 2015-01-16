@@ -1,36 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RIF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://automotive-his.de/200706/rif"
-     xmlns:rif-xhtml="http://automotive-his.de/200706/rif-xhtml"
+<RIF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rif-xhtml="http://automotive-his.de/200706/rif-xhtml"
+     xmlns="http://automotive-his.de/200706/rif"
      xsi:schemaLocation="http://automotive-his.de/200706/rif rif.xsd http://automotive-his.de/200706/rif-xhtml rif-xhtml.xsd">
-    <TITLE>Test data RIF62</TITLE>
+    <AUTHOR>Stefan Hendrata</AUTHOR>
     <COMMENT>Access policies for SpecTypes. Name of SpecType editable? Attribute definitions for SpecType creatable or
         deletable?
     </COMMENT>
-    <AUTHOR>Stefan Hendrata</AUTHOR>
-    <VERSION>0.1</VERSION>
-    <CREATION-TIME>2005-05-23T12:00:00+02:00</CREATION-TIME>
     <COUNTRY-CODE>DE</COUNTRY-CODE>
-    <SOURCE-TOOL-ID>Manually written</SOURCE-TOOL-ID>
+    <CREATION-TIME>2005-05-23T12:00:00+02:00</CREATION-TIME>
     <IDENTIFIER>ID_RIF_File</IDENTIFIER>
+    <SOURCE-TOOL-ID>Manually written</SOURCE-TOOL-ID>
+    <TITLE>Test data RIF62</TITLE>
+    <VERSION>0.1</VERSION>
+    <ACCESS-POLICIES>
+        <ACCESS-POLICY>
+            <IDENTIFIER>ID_AccPol_Edit</IDENTIFIER>
+            <DESC>This is the access policy for "editable" information elements.</DESC>
+            <ACCESS-MODE>EDIT</ACCESS-MODE>
+            <LAST-CHANGE>2005-06-01T10:41:29+02:00</LAST-CHANGE>
+            <SPEC-TYPES>
+                <SPEC-TYPE-REF>ID_SpecType_2</SPEC-TYPE-REF>
+            </SPEC-TYPES>
+        </ACCESS-POLICY>
+        <ACCESS-POLICY>
+            <IDENTIFIER>ID_AccPol_Create</IDENTIFIER>
+            <DESC>This is the access policy for "creatable" information elements.</DESC>
+            <ACCESS-MODE>CREATE</ACCESS-MODE>
+            <LAST-CHANGE>2005-06-01T10:41:29+02:00</LAST-CHANGE>
+            <SPEC-TYPES>
+                <SPEC-TYPE-REF>ID_SpecType_3</SPEC-TYPE-REF>
+            </SPEC-TYPES>
+        </ACCESS-POLICY>
+        <ACCESS-POLICY>
+            <IDENTIFIER>ID_AccPol_Delete</IDENTIFIER>
+            <DESC>This is the access policy for "deletable" information elements.</DESC>
+            <ACCESS-MODE>DELETE</ACCESS-MODE>
+            <LAST-CHANGE>2005-06-01T10:41:29+02:00</LAST-CHANGE>
+            <SPEC-TYPES>
+                <SPEC-TYPE-REF>ID_SpecType_4</SPEC-TYPE-REF>
+            </SPEC-TYPES>
+        </ACCESS-POLICY>
+    </ACCESS-POLICIES>
     <DATATYPES>
         <DATATYPE-DEFINITION-DOCUMENT>
             <IDENTIFIER>ID_DatatypeXhtml</IDENTIFIER>
             <LONG-NAME>Standard XHTML type</LONG-NAME>
             <DESC>This complex datatype definition specifies a the standard XHTML datatype for formatted text.</DESC>
-            <FORMAT>XHTML</FORMAT>
-            <EMBEDDED>TRUE</EMBEDDED>
+            <EMBEDDED>true</EMBEDDED>
+            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
         </DATATYPE-DEFINITION-DOCUMENT>
         <DATATYPE-DEFINITION-STRING>
             <DESC>This is a standard string type.</DESC>
             <IDENTIFIER>ID_StringType_1</IDENTIFIER>
             <LONG-NAME>Standard String Type</LONG-NAME>
             <MAX-LENGTH>65535</MAX-LENGTH>
+            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
         </DATATYPE-DEFINITION-STRING>
         <DATATYPE-DEFINITION-STRING>
             <DESC>This is a another string type.</DESC>
             <IDENTIFIER>ID_StringType_2</IDENTIFIER>
             <LONG-NAME>Another String Type</LONG-NAME>
             <MAX-LENGTH>255</MAX-LENGTH>
+            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
         </DATATYPE-DEFINITION-STRING>
         <DATATYPE-DEFINITION-ENUMERATION>
             <IDENTIFIER>ID_DatatypeEnum_1</IDENTIFIER>
@@ -39,21 +70,49 @@
             <LAST-CHANGE>2005-05-27T14:34:51+02:00</LAST-CHANGE>
             <SPECIFIED-VALUES>
                 <ENUM-VALUE>
+                    <PROPERTIES>
+                        <EMBEDDED-VALUE>
+                            <KEY>0</KEY>
+                            <OTHER-CONTENT/>
+                        </EMBEDDED-VALUE>
+                    </PROPERTIES>
+                    <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                     <IDENTIFIER>ID_EnumValue_1</IDENTIFIER>
                     <LONG-NAME>New</LONG-NAME>
                     <DESC>Requirement is new and not yet approved.</DESC>
                 </ENUM-VALUE>
                 <ENUM-VALUE>
+                    <PROPERTIES>
+                        <EMBEDDED-VALUE>
+                            <KEY>0</KEY>
+                            <OTHER-CONTENT/>
+                        </EMBEDDED-VALUE>
+                    </PROPERTIES>
+                    <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                     <IDENTIFIER>ID_EnumValue_2</IDENTIFIER>
                     <LONG-NAME>Approved</LONG-NAME>
                     <DESC>Requirement has been consolidated and is now approved.</DESC>
                 </ENUM-VALUE>
                 <ENUM-VALUE>
+                    <PROPERTIES>
+                        <EMBEDDED-VALUE>
+                            <KEY>0</KEY>
+                            <OTHER-CONTENT/>
+                        </EMBEDDED-VALUE>
+                    </PROPERTIES>
+                    <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                     <IDENTIFIER>ID_EnumValue_3</IDENTIFIER>
                     <LONG-NAME>Rejected</LONG-NAME>
                     <DESC>Consolidation on requirement has not been successful, requirement is thus rejected.</DESC>
                 </ENUM-VALUE>
                 <ENUM-VALUE>
+                    <PROPERTIES>
+                        <EMBEDDED-VALUE>
+                            <KEY>0</KEY>
+                            <OTHER-CONTENT/>
+                        </EMBEDDED-VALUE>
+                    </PROPERTIES>
+                    <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                     <IDENTIFIER>ID_EnumValue_4</IDENTIFIER>
                     <LONG-NAME>Postponed</LONG-NAME>
                     <DESC>Decision on whether to approve or reject the requirement is postponed to a later date.</DESC>
@@ -67,11 +126,25 @@
             <LAST-CHANGE>2005-06-01T11:26:31+02:00</LAST-CHANGE>
             <SPECIFIED-VALUES>
                 <ENUM-VALUE>
+                    <PROPERTIES>
+                        <EMBEDDED-VALUE>
+                            <KEY>0</KEY>
+                            <OTHER-CONTENT/>
+                        </EMBEDDED-VALUE>
+                    </PROPERTIES>
+                    <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                     <IDENTIFIER>ID_EnumValue_5</IDENTIFIER>
                     <LONG-NAME>Mustermann</LONG-NAME>
                     <DESC>Max Mustermann</DESC>
                 </ENUM-VALUE>
                 <ENUM-VALUE>
+                    <PROPERTIES>
+                        <EMBEDDED-VALUE>
+                            <KEY>0</KEY>
+                            <OTHER-CONTENT/>
+                        </EMBEDDED-VALUE>
+                    </PROPERTIES>
+                    <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                     <IDENTIFIER>ID_EnumValue_6</IDENTIFIER>
                     <LONG-NAME>Musterfrau</LONG-NAME>
                     <DESC>Monika Musterfrau</DESC>
@@ -104,6 +177,11 @@
                     <LAST-CHANGE>2005-05-30T11:51:25+02:00</LAST-CHANGE>
                     <DEFAULT-VALUE>
                         <ATTRIBUTE-VALUE-SIMPLE>
+                            <IDENTIFIER/>
+                            <DEFINITION>
+                                <ATTRIBUTE-DEFINITION-SIMPLE-REF/>
+                            </DEFINITION>
+                            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                             <THE-VALUE>TBD</THE-VALUE>
                         </ATTRIBUTE-VALUE-SIMPLE>
                     </DEFAULT-VALUE>
@@ -116,12 +194,17 @@
                     <LONG-NAME>Status</LONG-NAME>
                     <DESC>This attribute contains the current status of the requirement.</DESC>
                     <LAST-CHANGE>2005-05-30T11:56:14+02:00</LAST-CHANGE>
-                    <MULTI-VALUED>FALSE</MULTI-VALUED>
+                    <MULTI-VALUED>false</MULTI-VALUED>
                     <TYPE>
                         <DATATYPE-DEFINITION-ENUMERATION-REF>ID_DatatypeEnum_1</DATATYPE-DEFINITION-ENUMERATION-REF>
                     </TYPE>
                     <DEFAULT-VALUE>
                         <ATTRIBUTE-VALUE-ENUMERATION>
+                            <IDENTIFIER/>
+                            <DEFINITION>
+                                <ATTRIBUTE-DEFINITION-ENUMERATION-REF/>
+                            </DEFINITION>
+                            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                             <VALUES>
                                 <ENUM-VALUE-REF>ID_EnumValue_1</ENUM-VALUE-REF>
                             </VALUES>
@@ -133,7 +216,7 @@
                     <LONG-NAME>Status</LONG-NAME>
                     <DESC>This attribute contains name of the responsible person.</DESC>
                     <LAST-CHANGE>2005-05-30T11:58:14+02:00</LAST-CHANGE>
-                    <MULTI-VALUED>FALSE</MULTI-VALUED>
+                    <MULTI-VALUED>false</MULTI-VALUED>
                     <TYPE>
                         <DATATYPE-DEFINITION-ENUMERATION-REF>ID_DatatypeEnum_2</DATATYPE-DEFINITION-ENUMERATION-REF>
                     </TYPE>
@@ -162,6 +245,11 @@
                     <LAST-CHANGE>2005-05-30T11:51:25+02:00</LAST-CHANGE>
                     <DEFAULT-VALUE>
                         <ATTRIBUTE-VALUE-SIMPLE>
+                            <IDENTIFIER/>
+                            <DEFINITION>
+                                <ATTRIBUTE-DEFINITION-SIMPLE-REF/>
+                            </DEFINITION>
+                            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                             <THE-VALUE>TBD</THE-VALUE>
                         </ATTRIBUTE-VALUE-SIMPLE>
                     </DEFAULT-VALUE>
@@ -174,12 +262,17 @@
                     <LONG-NAME>Status</LONG-NAME>
                     <DESC>This attribute contains the current status of the requirement.</DESC>
                     <LAST-CHANGE>2005-05-30T11:56:14+02:00</LAST-CHANGE>
-                    <MULTI-VALUED>FALSE</MULTI-VALUED>
+                    <MULTI-VALUED>false</MULTI-VALUED>
                     <TYPE>
                         <DATATYPE-DEFINITION-ENUMERATION-REF>ID_DatatypeEnum_1</DATATYPE-DEFINITION-ENUMERATION-REF>
                     </TYPE>
                     <DEFAULT-VALUE>
                         <ATTRIBUTE-VALUE-ENUMERATION>
+                            <IDENTIFIER/>
+                            <DEFINITION>
+                                <ATTRIBUTE-DEFINITION-ENUMERATION-REF/>
+                            </DEFINITION>
+                            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                             <VALUES>
                                 <ENUM-VALUE-REF>ID_EnumValue_1</ENUM-VALUE-REF>
                             </VALUES>
@@ -191,7 +284,7 @@
                     <LONG-NAME>Status</LONG-NAME>
                     <DESC>This attribute contains name of the responsible person.</DESC>
                     <LAST-CHANGE>2005-05-30T11:58:14+02:00</LAST-CHANGE>
-                    <MULTI-VALUED>FALSE</MULTI-VALUED>
+                    <MULTI-VALUED>false</MULTI-VALUED>
                     <TYPE>
                         <DATATYPE-DEFINITION-ENUMERATION-REF>ID_DatatypeEnum_2</DATATYPE-DEFINITION-ENUMERATION-REF>
                     </TYPE>
@@ -237,6 +330,11 @@
                     <LAST-CHANGE>2005-05-30T11:51:25+02:00</LAST-CHANGE>
                     <DEFAULT-VALUE>
                         <ATTRIBUTE-VALUE-SIMPLE>
+                            <IDENTIFIER/>
+                            <DEFINITION>
+                                <ATTRIBUTE-DEFINITION-SIMPLE-REF/>
+                            </DEFINITION>
+                            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                             <THE-VALUE>TBD</THE-VALUE>
                         </ATTRIBUTE-VALUE-SIMPLE>
                     </DEFAULT-VALUE>
@@ -249,12 +347,17 @@
                     <LONG-NAME>Status</LONG-NAME>
                     <DESC>This attribute contains the current status of the requirement.</DESC>
                     <LAST-CHANGE>2005-05-30T11:56:14+02:00</LAST-CHANGE>
-                    <MULTI-VALUED>FALSE</MULTI-VALUED>
+                    <MULTI-VALUED>false</MULTI-VALUED>
                     <TYPE>
                         <DATATYPE-DEFINITION-ENUMERATION-REF>ID_DatatypeEnum_1</DATATYPE-DEFINITION-ENUMERATION-REF>
                     </TYPE>
                     <DEFAULT-VALUE>
                         <ATTRIBUTE-VALUE-ENUMERATION>
+                            <IDENTIFIER/>
+                            <DEFINITION>
+                                <ATTRIBUTE-DEFINITION-ENUMERATION-REF/>
+                            </DEFINITION>
+                            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                             <VALUES>
                                 <ENUM-VALUE-REF>ID_EnumValue_1</ENUM-VALUE-REF>
                             </VALUES>
@@ -266,7 +369,7 @@
                     <LONG-NAME>Status</LONG-NAME>
                     <DESC>This attribute contains name of the responsible person.</DESC>
                     <LAST-CHANGE>2005-05-30T11:58:14+02:00</LAST-CHANGE>
-                    <MULTI-VALUED>FALSE</MULTI-VALUED>
+                    <MULTI-VALUED>false</MULTI-VALUED>
                     <TYPE>
                         <DATATYPE-DEFINITION-ENUMERATION-REF>ID_DatatypeEnum_2</DATATYPE-DEFINITION-ENUMERATION-REF>
                     </TYPE>
@@ -325,58 +428,37 @@
             </VALUES>
         </SPEC-OBJECT>
     </SPEC-OBJECTS>
-    <SPEC-HIERARCHY-ROOTS>
-        <SPEC-HIERARCHY-ROOT>
-            <IDENTIFIER>ID_SpecHierarchy_1</IDENTIFIER>
-            <LAST-CHANGE>2005-05-31T10:58:13+02:00</LAST-CHANGE>
-            <LONG-NAME>Requirements document structure</LONG-NAME>
-            <CHILDREN>
-                <SPEC-HIERARCHY>
-                    <OBJECT>
-                        <SPEC-OBJECT-REF>ID_SpecObj_1</SPEC-OBJECT-REF>
-                    </OBJECT>
-                </SPEC-HIERARCHY>
-            </CHILDREN>
-        </SPEC-HIERARCHY-ROOT>
-    </SPEC-HIERARCHY-ROOTS>
     <SPEC-GROUPS>
         <SPEC-GROUP>
             <IDENTIFIER>ID_SpecGroup_1</IDENTIFIER>
             <LONG-NAME>First Group</LONG-NAME>
             <DESC>This is the first group of specification objects.</DESC>
+            <TYPE>
+                <SPEC-TYPE-REF/>
+            </TYPE>
             <LAST-CHANGE>2005-05-31T11:24:30+02:00</LAST-CHANGE>
             <SPEC-OBJECTS>
                 <SPEC-OBJECT-REF>ID_SpecObj_1</SPEC-OBJECT-REF>
             </SPEC-OBJECTS>
         </SPEC-GROUP>
     </SPEC-GROUPS>
-    <ACCESS-POLICIES>
-        <ACCESS-POLICY>
-            <IDENTIFIER>ID_AccPol_Edit</IDENTIFIER>
-            <DESC>This is the access policy for "editable" information elements.</DESC>
-            <ACCESS-MODE>EDIT</ACCESS-MODE>
-            <LAST-CHANGE>2005-06-01T10:41:29+02:00</LAST-CHANGE>
-            <SPEC-TYPES>
-                <SPEC-TYPE-REF>ID_SpecType_2</SPEC-TYPE-REF>
-            </SPEC-TYPES>
-        </ACCESS-POLICY>
-        <ACCESS-POLICY>
-            <IDENTIFIER>ID_AccPol_Create</IDENTIFIER>
-            <DESC>This is the access policy for "creatable" information elements.</DESC>
-            <ACCESS-MODE>CREATE</ACCESS-MODE>
-            <LAST-CHANGE>2005-06-01T10:41:29+02:00</LAST-CHANGE>
-            <SPEC-TYPES>
-                <SPEC-TYPE-REF>ID_SpecType_3</SPEC-TYPE-REF>
-            </SPEC-TYPES>
-        </ACCESS-POLICY>
-        <ACCESS-POLICY>
-            <IDENTIFIER>ID_AccPol_Delete</IDENTIFIER>
-            <DESC>This is the access policy for "deletable" information elements.</DESC>
-            <ACCESS-MODE>DELETE</ACCESS-MODE>
-            <LAST-CHANGE>2005-06-01T10:41:29+02:00</LAST-CHANGE>
-            <SPEC-TYPES>
-                <SPEC-TYPE-REF>ID_SpecType_4</SPEC-TYPE-REF>
-            </SPEC-TYPES>
-        </ACCESS-POLICY>
-    </ACCESS-POLICIES>
+    <SPEC-HIERARCHY-ROOTS>
+        <SPEC-HIERARCHY-ROOT>
+            <IDENTIFIER>ID_SpecHierarchy_1</IDENTIFIER>
+            <TYPE>
+                <SPEC-TYPE-REF/>
+            </TYPE>
+            <LAST-CHANGE>2005-05-31T10:58:13+02:00</LAST-CHANGE>
+            <LONG-NAME>Requirements document structure</LONG-NAME>
+            <CHILDREN>
+                <SPEC-HIERARCHY>
+                    <IDENTIFIER/>
+                    <OBJECT>
+                        <SPEC-OBJECT-REF>ID_SpecObj_1</SPEC-OBJECT-REF>
+                    </OBJECT>
+                    <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
+                </SPEC-HIERARCHY>
+            </CHILDREN>
+        </SPEC-HIERARCHY-ROOT>
+    </SPEC-HIERARCHY-ROOTS>
 </RIF>

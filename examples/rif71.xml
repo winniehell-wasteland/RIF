@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RIF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://automotive-his.de/200706/rif"
-     xmlns:rif-xhtml="http://automotive-his.de/200706/rif-xhtml"
+<RIF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rif-xhtml="http://automotive-his.de/200706/rif-xhtml"
+     xmlns="http://automotive-his.de/200706/rif"
      xsi:schemaLocation="http://automotive-his.de/200706/rif rif.xsd http://automotive-his.de/200706/rif-xhtml rif-xhtml.xsd">
-    <TITLE>Test data RIF71</TITLE>
-    <COMMENT>Embedded OLE object.</COMMENT>
     <AUTHOR>Stefan Hendrata</AUTHOR>
-    <VERSION>0.1</VERSION>
-    <CREATION-TIME>2005-05-23T12:00:00+02:00</CREATION-TIME>
+    <COMMENT>Embedded OLE object.</COMMENT>
     <COUNTRY-CODE>DE</COUNTRY-CODE>
-    <SOURCE-TOOL-ID>Manually written</SOURCE-TOOL-ID>
+    <CREATION-TIME>2005-05-23T12:00:00+02:00</CREATION-TIME>
     <IDENTIFIER>ID_RIF_File</IDENTIFIER>
+    <SOURCE-TOOL-ID>Manually written</SOURCE-TOOL-ID>
+    <TITLE>Test data RIF71</TITLE>
+    <VERSION>0.1</VERSION>
     <DATATYPES>
         <DATATYPE-DEFINITION-DOCUMENT>
             <IDENTIFIER>ID_DatatypeXhtml</IDENTIFIER>
             <LONG-NAME>Standard XHTML type</LONG-NAME>
             <DESC>This complex datatype definition specifies a the standard XHTML datatype for formatted text.</DESC>
-            <FORMAT>XHTML</FORMAT>
-            <EMBEDDED>TRUE</EMBEDDED>
+            <EMBEDDED>true</EMBEDDED>
+            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
         </DATATYPE-DEFINITION-DOCUMENT>
     </DATATYPES>
     <SPEC-TYPES>
@@ -98,12 +98,14 @@
                     <OBJECT>
                         <SPEC-OBJECT-REF>ID_SpecObj_1</SPEC-OBJECT-REF>
                     </OBJECT>
+                    <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                     <CHILDREN>
                         <SPEC-HIERARCHY>
                             <IDENTIFIER>ID_SpecHierarchy_2</IDENTIFIER>
                             <OBJECT>
                                 <SPEC-OBJECT-REF>ID_SpecObj_2</SPEC-OBJECT-REF>
                             </OBJECT>
+                            <LAST-CHANGE>2005-05-23T12:00:00+02:00</LAST-CHANGE>
                         </SPEC-HIERARCHY>
                     </CHILDREN>
                 </SPEC-HIERARCHY>
