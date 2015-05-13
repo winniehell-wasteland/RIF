@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RIF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rif-xhtml="http://automotive-his.de/200706/rif-xhtml"
      xmlns="http://automotive-his.de/200706/rif"
-     xsi:schemaLocation="http://automotive-his.de/schema/rif rif.xsd http://automotive-his.de/schema/rif-xhtml rif-xhtml.xsd">
+     xsi:schemaLocation="http://automotive-his.de/200706/rif rif.xsd http://automotive-his.de/200706/rif-xhtml rif-xhtml.xsd">
     <AUTHOR>Stefan Hendrata</AUTHOR>
     <COMMENT>Definition of an enumeration type</COMMENT>
     <COUNTRY-CODE>DE</COUNTRY-CODE>
