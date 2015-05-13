@@ -198,7 +198,7 @@
             </xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:pattern value="[-+]?(\d+|\d+(\.\d+)?%)|[1-9]?(\d+)?\*"/>
+            <xs:pattern value="[\-+]?(\d+|\d+(\.\d+)?%)|[1-9]?(\d+)?\*"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:annotation>
