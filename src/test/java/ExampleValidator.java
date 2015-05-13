@@ -8,14 +8,13 @@ import org.xml.sax.SAXParseException;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@RunWith(Parameterized.class)
+@RunWith(Parallelized.class)
 public class ExampleValidator {
 
     private static List<String> ENABLED_SAX_FEATURES = Arrays.asList(
@@ -28,7 +27,24 @@ public class ExampleValidator {
 
     private static File EXAMPLES_DIRECTORY = new File("examples");
 
-    private static SAXParser PARSER = new SAXParser();
+    private SAXParser parser = new SAXParser();
+
+    private static ErrorHandler SAX_ERROR_HANDLER = new ErrorHandler() {
+        @Override
+        public void warning(SAXParseException e) throws SAXException {
+            Assert.fail(e.toString());
+        }
+
+        @Override
+        public void error(SAXParseException e) throws SAXException {
+            Assert.fail(e.toString());
+        }
+
+        @Override
+        public void fatalError(SAXParseException e) throws SAXException {
+            Assert.fail(e.toString());
+        }
+    };
 
     private static File SCHEMA_DIRECTORY = new File("schema");
 
@@ -58,32 +74,6 @@ public class ExampleValidator {
         return parameterValues;
     }
 
-    @BeforeClass
-    public static void setUp() throws Exception {
-        for (String feature : ENABLED_SAX_FEATURES) {
-            PARSER.setFeature(feature, true);
-        }
-
-        PARSER.setErrorHandler(new ErrorHandler() {
-            @Override
-            public void warning(SAXParseException e) throws SAXException {
-                Assert.fail(e.toString());
-            }
-
-            @Override
-            public void error(SAXParseException e) throws SAXException {
-                Assert.fail(e.toString());
-            }
-
-            @Override
-            public void fatalError(SAXParseException e) throws SAXException {
-                Assert.fail(e.toString());
-            }
-        });
-
-        copySchemaFiles(EXAMPLES_DIRECTORY);
-    }
-
     private static void copySchemaFiles(File destinationDirectory) throws
             IOException {
         for (String schemaFileName : SCHEMA_FILE_NAMES) {
@@ -94,8 +84,19 @@ public class ExampleValidator {
         }
     }
 
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+        copySchemaFiles(EXAMPLES_DIRECTORY);
+    }
+
     @Before
-    public void setUpDirectory() throws IOException {
+    public void setUp() throws Exception {
+        parser.setErrorHandler(SAX_ERROR_HANDLER);
+
+        for (String feature : ENABLED_SAX_FEATURES) {
+            parser.setFeature(feature, true);
+        }
+
         if (this.exampleFile.isDirectory()) {
             copySchemaFiles(this.exampleFile);
         }
@@ -111,25 +112,6 @@ public class ExampleValidator {
             fileName = this.exampleFile.toString();
         }
 
-        PARSER.parse(fileName);
-    }
-
-    @After
-    public void tearDownDirectory() {
-        if (this.exampleFile.isDirectory()) {
-            deleteSchemaFiles(this.exampleFile);
-        }
-    }
-
-    @AfterClass
-    public static void tearDown() throws IOException {
-        deleteSchemaFiles(EXAMPLES_DIRECTORY);
-    }
-
-    private static void deleteSchemaFiles(File directory) {
-        for (String schemaFileName : SCHEMA_FILE_NAMES) {
-            File schemaFile = new File(directory, schemaFileName);
-            Assert.assertTrue(schemaFile.delete());
-        }
+        parser.parse(fileName);
     }
 }
